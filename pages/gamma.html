@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Training</title>
+    <link rel="icon" href="../img/favicon-guitar.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon-guitar.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../fonts/font/stylesheet1.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="menu-header1">
+                    <a href="./index.html">Guitar</a>
+                    <p>Всё для гитары</p>
+                </div>
+                <div class="menu-header2" id="menu-header2">
+                    <script src="../js/menu.js"></script>
+                </div>
+            </div>
+        </div>
+        <div class="form-button">
+            <button type="button" class="demoModalStart" id="demoModalStart">Нужна помощь?</button>
+        </div>
+    </header>
+    <div class="title_under">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <h1>Гаммы на гитаре</h1>
+                    <p class="top_kit">
+                        Этот раздел сделан для того, чтобы вам было удобнее разбирать каждую из гамм. В нем вы найдете
+                        ссылки на отдельные статьи, посвященные каждой из тональностей и боксам внутри нее.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="demoModalShadow" class="demoModalShadow">
+        <form action="sender.php" method="post" class="demoModal">
+            <input type="text" class="name" name="name" placeholder="Имя" required>
+            <input type="text" name="surname" placeholder="Фамилия">
+            <input type="text" class="phone" name="phone" placeholder="Телефон">
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Введите свой вопрос"></textarea>
+            <div class="form-buttons">
+                <button type="button" id="send-form" class="send-form">ОТПРАВИТЬ</button>
+                <button type="button" id="demoModalClose" class="close-form">ЗАКРЫТЬ</button>
+            </div>
+            <!-- <div class="status"></div> -->
+        </form>
+    </div>
+
+    <main class="main-content chords">
+        <div class="container">
+            <div class="row">
+                <div class="menu-main">
+                    <div class="seo_text backwhite gamma">
+                        <h2 style=" text-align:center">
+                            <span style="font-weight: 560;">Какие гаммы учить в первую очередь?</span>
+                        </h2>
+                        <p>
+                            <span>
+
+                                Простой ответ на этот вопрос – все. Таким образом, вы не только зазубрите звуки, которые
+                                входят в тональность, но и выучите
+                            </span>
+                        </p>
+                        <h2 style=" text-align:center">
+                            <span style="font-weight: 560;">Примеры гамм на гитаре:</span>
+                        </h2>
+                        <p>Этот раздел включается в себя примеры гамм и аппликатур к ним. Это сделано в первую очередь
+                            для начинающих гитаристов, чтобы они посмотрели и освоились – нашли нужные боксы на грифе и
+                            поняли на практике, что это такое.</p>
+                        <img decoding="async" src="../img/Gamma-Do-mazhor.jpg" alt="Гамма До-мажор">
+                        <div class="sound_list">
+                            <div class="li" id="Do-mazhor-cound-list">
+                                <audio id="Do-mazhor-sound" src="../audio/Gamma-Do-mazhor.mp3" loop></audio>
+                                <div class="btns">
+                                    <button class="play active"
+                                        onclick="play('#Do-mazhor-sound','#Do-mazhor-cound-list');">
+                                        <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                    </button>
+                                    <button class="stop"
+                                        onclick="stopAudio('#Do-mazhor-sound','#Do-mazhor-cound-list');">
+                                        <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                    </button>
+                                </div>
+                                <p>Гамма До-мажор</p>
+                            </div>
+                        </div>
+                        <img decoding="async" src="../img/Gamma-Lya-minor.jpg" alt="Гамма Ля-Минор">
+                        <div class="sound_list">
+                            <div class="li" id="Lya-minor-cound-list">
+                                <audio id="Lya-minor-sound" src="../audio/Gamma-Lya-minor.mp3" loop></audio>
+                                <div class="btns">
+                                    <button class="play active"
+                                        onclick="play('#Lya-minor-sound','#Lya-minor-cound-list');">
+                                        <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                    </button>
+                                    <button class="stop"
+                                        onclick="stopAudio('#Lya-minor-sound','#Lya-minor-cound-list');">
+                                        <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                    </button>
+                                </div>
+                                <p>Гамма Ля-минор</p>
+                            </div>
+                        </div>
+                        <img decoding="async" src="../img/Hromoticheskaya-gamma.jpg" alt="Гамма Хроматическая">
+                        <div class="sound_list">
+                            <div class="li" id="Hromaticheskaya-cound-list">
+                                <audio id="Hromaticheskaya-sound" src="../audio/Hromaticheskaya-gamma.mp3" loop></audio>
+                                <div class="btns">
+                                    <button class="play active"
+                                        onclick="play('#Hromaticheskaya-sound','#Hromaticheskaya-cound-list');">
+                                        <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                    </button>
+                                    <button class="stop"
+                                        onclick="stopAudio('#Hromaticheskaya-sound','#Hromaticheskaya-cound-list');">
+                                        <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                    </button>
+                                </div>
+                                <p>Гамма Хроматическая</p>
+                            </div>
+                        </div>
+                        <!-- <h2>
+                            <span>Полный список</span>
+                        </h2>
+                        <ul class="ul-gamma">
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                            <li>
+                                <a href="#">До-мажор</a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="menu-footer">
+                    <p>Guitar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../jQuery/jquery.maskedinput.js"></script>
+    <script src="../jQuery/jquery.validate.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/audio.js"></script>
+</body>
+
+</html>

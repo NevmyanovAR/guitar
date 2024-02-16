@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent !important;
+    color: inherit;
+}
+
+p {
+    color: white;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+h1 {
+    color: white
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    list-style: disc;
+}
+
+body {
+    font-family: 'Futura PT Book';
+    box-sizing: border-box;
+    line-height: 1.5;
+    margin: 0;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+
+}
+
+.col1,
+.menu-main,
+.menu-header1,
+.menu-header2,
+.menu-footer {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Header */
+
+.main-header {
+    padding-top: 47px;
+    padding-bottom: 51px;
+    position: absolute;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .form-button {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .form-button {
+        max-width: 1140px;
+    }
+}
+
+/* .menu {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 16.666667%;
+} */
+
+.menu-header1 a,
+.menu-footer p {
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 24px 21px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #E71401;
+    font-weight: 900;
+    padding-left: 35px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.menu-header1 p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 10px;
+    left: 40px;
+}
+
+@media (min-width: 991px) {
+    .menu-footer {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .menu-header2 {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+
+    .menu-header1 {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+
+
+    .menu-header1 a {
+        font-size: 27px;
+    }
+
+    .menu-header1 p {
+        font-size: 13px;
+    }
+}
+
+/* .menu-header2 {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    max-width: 83.3%;
+} */
+
+.main_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 9px;
+
+}
+
+.main_menu>li>a {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.4s;
+}
+
+.not-children-item>a:before {
+    content: '';
+    display: block;
+    height: 0;
+    background: #E71401;
+    width: 100%;
+    bottom: -7px;
+    left: 0;
+    transition: 0.1s;
+    position: absolute;
+    opacity: 0;
+}
+
+.not-children-item>a:hover:before {
+    height: 4px;
+    opacity: 1;
+}
+
+.main_menu .children-item {
+    position: relative;
+}
+
+.main_menu .children-item .sub-menu {
+    position: absolute;
+    background: #fff;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+    z-index: 99;
+}
+
+.main_menu .children-item:hover .sub-menu {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.main_menu .children-item .sub-menu .menu-item a {
+    font-size: 16px;
+    line-height: 1.4;
+    display: block;
+    padding: 10px;
+}
+
+.main_menu .children-item .sub-menu .menu-item a:hover {
+    background: #EEEDE8 !important;
+}
+
+/* .main_menu .children-item .sub-menu .menu-item a,
+.main_menu>li>a {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0;
+    line-height: 2;
+} */
+
+@media (min-width: 991px) and (max-width: 1200px) {
+
+    .main_menu>li>a {
+        font-size: 11px;
+    }
+}
+
+.form-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.demoModalStart {
+    display: flex;
+    background: #FF7B1B;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Future PT Book';
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.demoModalStart:hover,
+.demoModalStart:focus {
+
+    transform: translateY(-0.25em);
+}
+
+label.error {
+    display: none !important;
+}
+
+form {
+    /* border: 1px solid #c3c3c3; */
+    padding: 15px;
+    width: 320px;
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+form input.error {
+    border: 2px solid;
+    border-color: red;
+}
+
+form textarea {
+    width: 100%;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+    resize: none;
+}
+
+.form-buttons {
+    display: flex;
+
+    gap: 5px;
+}
+
+.send-form,
+.close-form {
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-weight: 200px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 0px solid;
+    background: white;
+    transition: 0.2s;
+    font-family: 'Future PT Extra';
+    word-wrap: break-word;
+}
+
+.send-form:hover,
+.close-form:hover {
+    background-color: #EEEDE8;
+}
+
+.send-form:active,
+.close-form:active {
+    transform: scale(0.90);
+}
+
+.send-form {
+    font-family: "Ft Future Book";
+}
+
+.demoModalShadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    /*max-width: 100%!important;*/
+    height: 100% !important;
+    /*max-height: 100%!important;*/
+    justify-content: center;
+    align-items: center;
+    background: rgba(71, 71, 71, 0.203);
+    z-index: 99999;
+    display: none;
+}
+
+
+@media (min-width: 991px) and (max-width: 1200px) {
+
+    .button {
+        font-size: 13px;
+    }
+}
+
+.title_under {
+    padding-top: 200px;
+    padding-bottom: 50px;
+    background-image: url(../img/guitar.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+.col1 h1 {
+    font-size: 28px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.top_kit {
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+/* Main */
+
+.main-content {
+    min-height: 300px;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.main-content.chords {
+    background-color: #EEEDE8;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.sound_list {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sound_list li,
+.sound_list .li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f2f1ee;
+    padding-left: 50px;
+}
+
+.sound_list .btns {
+    position: relative;
+}
+
+.sound_list button {
+    border: none;
+    background: none;
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    margin-top: -15px;
+    opacity: 0;
+    /* transition: 0.4s; */
+    pointer-events: none;
+}
+
+.sound_list button img {
+    width: 30px;
+    height: 30px;
+}
+
+.sound_list li p,
+.sound_list .li p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.sound_list button.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+.seo_text img {
+    display: block;
+    margin: auto;
+    max-width: 95%;
+    margin-bottom: 1rem;
+}
+
+.seo_text p {
+    font-size: 18px;
+    color: #1A1A1A;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.seo_text h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.seo_text li {
+    font-size: 18px;
+    color: #1A1A1A;
+    font-weight: bold;
+    list-style-type: circle;
+    margin-left: 15px;
+    line-height: 22px;
+    padding-bottom: 14px;
+}
+
+.backwhite {
+    background: #fff;
+    padding: 20px 15px;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table-tda td {
+    width: 91px;
+}
+
+.table-tda td a {
+    color: #e54e53;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* gamma list*/
+.ul-gamma {
+    margin: 0 0 20px 20px;
+    padding: 0 0 0 20px;
+}
+
+.ul-gamma li {
+    font-size: 18px;
+    list-style-type: circle;
+    margin-left: 15px;
+    padding-bottom: 14px;
+}
+
+.ul-gamma a {
+    color: #e54e53;
+
+}
+
+/* Footer */
+
+footer {
+    background: #1D1C16;
+    padding-top: 28px !important;
+    padding-bottom: 25px !important;
+}

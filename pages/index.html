@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Training</title>
+    <link rel="icon" href="../img/favicon-guitar.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon-guitar.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../fonts/font/stylesheet1.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="menu-header1">
+                    <a href="./index.html">Guitar</a>
+                    <p>Всё для гитары</p>
+                </div>
+                <div class="menu-header2" id="menu-header2">
+                    <script src="../js/menu.js"></script>
+                </div>
+            </div>
+        </div>
+        <div class="form-button">
+            <button type="button" class="demoModalStart" id="demoModalStart">Нужна помощь?</button>
+        </div>
+    </header>
+
+    <div class="title_under">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <h1>Настройка гитары на слух</h1>
+                    <p class="top_kit">
+                        Каждый музыкант должен научиться настройке гитары на слух, а после уже задуматься об
+                        использовании тюнера для упрощения процесса. Выучив азы, Вы сможете выполнять это за 5-10 минут.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="demoModalShadow" class="demoModalShadow">
+        <form action="sender.php" method="post" class="demoModal">
+            <input type="text" class="name" name="name" placeholder="Имя" required>
+            <input type="text" name="surname" placeholder="Фамилия">
+            <input type="text" class="phone" name="phone" placeholder="Телефон">
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Введите свой вопрос"></textarea>
+            <div class="form-buttons">
+                <button type="button" id="send-form" class="send-form">ОТПРАВИТЬ</button>
+                <button type="button" id="demoModalClose" class="close-form">ЗАКРЫТЬ</button>
+            </div>
+            <!-- <div class="status"></div> -->
+        </form>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="menu-main">
+                    <ul class="sound_list">
+                        <li id="e4-cound-list">
+                            <audio id="e4-sound" src="../audio/e4.mp3" loop></audio>
+                            <div class="btns">
+                                <button class="play active" onclick="play('#e4-sound','#e4-cound-list');">
+                                    <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                </button>
+                                <button class="stop" onclick="stopAudio('#e4-sound','#e4-cound-list');">
+                                    <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                </button>
+                            </div>
+                            <p>1 струна гитары — E4 (самая тонкая, нота «Ми»)</p>
+                        </li>
+                        <li id="b3-cound-list">
+                            <audio id="b3-sound" src="../audio/b3.mp3" loop></audio>
+                            <div class="btns">
+                                <button class="play active" onclick="play('#b3-sound','#b3-cound-list');">
+                                    <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                </button>
+                                <button class="stop" onclick="stopAudio('#b3-sound','#b3-cound-list');">
+                                    <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                </button>
+                            </div>
+                            <p>2 струна гитары — B3 (нота «Си»)</p>
+                        </li>
+                        <li id="g3-cound-list">
+                            <audio id="g3-sound" src="../audio/g3.mp3" loop></audio>
+                            <div class="btns">
+                                <button class="play active" onclick="play('#g3-sound','#g3-cound-list');">
+                                    <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                </button>
+                                <button class="stop" onclick="stopAudio('#g3-sound','#g3-cound-list');">
+                                    <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                </button>
+                            </div>
+                            <p>3 струна гитары — G3 (нота «Соль»)</p>
+                        </li>
+                        <li id="d3-cound-list">
+                            <audio id="d3-sound" src="../audio/d3.mp3" loop></audio>
+                            <div class="btns">
+                                <button class="play active" onclick="play('#d3-sound','#d3-cound-list');">
+                                    <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                </button>
+                                <button class="stop" onclick="stopAudio('#d3-sound','#d3-cound-list');">
+                                    <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                </button>
+                            </div>
+                            <p>4 струна гитары — D3 (нота «Ре»)</p>
+                        </li>
+                        <li id="a2-cound-list">
+                            <audio id="a2-sound" src="../audio/a2.mp3" loop></audio>
+                            <div class="btns">
+                                <button class="play active" onclick="play('#a2-sound','#a2-cound-list');">
+                                    <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                </button>
+                                <button class="stop" onclick="stopAudio('#a2-sound','#a2-cound-list');">
+                                    <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                </button>
+                            </div>
+                            <p>5 струна гитары — A2 (нота «Ля»)</p>
+                        </li>
+                        <li id="e2-cound-list">
+                            <audio id="e2-sound" src="../audio/e2.mp3" loop></audio>
+                            <div class="btns">
+                                <button class="play active" onclick="play('#e2-sound','#e2-cound-list');">
+                                    <img decoding="async" src="../img/play.svg" alt="Слушать">
+                                </button>
+                                <button class="stop" onclick="stopAudio('#e2-sound','#e2-cound-list');">
+                                    <img decoding="async" src="../img/stop.svg" alt="Остановить">
+                                </button>
+                            </div>
+                            <p>6 струна гитары — E2 (нота «Ми»)</p>
+                        </li>
+                    </ul>
+                    <div class="seo_text">
+                        <p> Настройка гитары на слух считается одним из самых распространённых способов. Отличается
+                            простотой,
+                            поэтому подойдёт новичкам. Опираться важно на звук гитары, действуя следующим образом:</p>
+                        <ul>
+                            <li>1. Регулируем первую струну, расположенную снизу. Она должна находиться на ноте Ми. За
+                                основу берут
+                                уже налаженный инструмент или можно использовать специальную программу, которая есть на
+                                нашем сайте.
+                            </li>
+                            <li> 2. Вторую настраивают, опираясь на 1-ю. Требуется зажать 5 лад и регулировать так,
+                                чтобы звучала в
+                                унисон вместе с 1-ой.</li>
+                            <li>3. Для настройки 3-ей нужно зажимать четвёртый лад, добиваясь унисонного звучания со
+                                второй.</li>
+                            <li>4. Для четвертой, пятой и шестой требуется зажать 5 лад. Звучать они должны так же, как
+                                и
+                                предыдущая. То есть, для 4-ой предстаёт ориентиром 3-я, для 5-ой опорой является
+                                четвертая и т.д.
+                            </li>
+                        </ul>
+                        <p>Рекомендуется пройтись по ним повторно, поскольку звук гитары может измениться из-за
+                            натяжения. Представленный несложный способ настройки гитары на слух поможет добиться
+                            качественного звучания.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="menu-footer">
+                    <p>Guitar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/audio.js"></script>
+    <script src="../jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../jQuery/jquery.maskedinput.js"></script>
+    <script src="../jQuery/jquery.validate.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
