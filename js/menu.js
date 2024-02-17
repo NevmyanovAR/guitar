@@ -22,10 +22,10 @@ document.getElementById("menu-header2").innerHTML = '\
             <a href="#">Библиотека &bigtriangledown; </a>\
             <ul class="sub-menu">\
                 <li class="menu-item">\
-                    <a href="../pages/LibrChords.html">Аккорды</a>\
+                    <a href="./LibrChords.html">Аккорды</a>\
                 </li>\
                 <li class="menu-item">\
-                    <a href="../pages/gamma.html">Гаммы</a>\
+                    <a href="./gamma.html">Гаммы</a>\
                 </li>\
                 <li class="menu-item">\
                     <a href="#">Другое</a>\
